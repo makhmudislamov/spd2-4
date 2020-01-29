@@ -10,10 +10,15 @@ def find_sum(arr, t):
     # move the left pointer to right
     # return list(left and right nums) when its equal to target
 
+    sorted_arr = sorted(arr)
 
+    print(sorted_arr)
 
     pass
 
 
 
 
+arr = [5, 3, 6, 8, 2, 4, 7]
+t = 10
+print(find_sum(arr, t))
