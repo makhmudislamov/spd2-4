@@ -1,3 +1,8 @@
+"""
+Given an array a of n numbers and a target value t, find two numbers whose sum is t.
+Example: a=[5, 3, 6, 8, 2, 4, 7], t=10  =>  [3, 7] or [6, 4] or [8, 2]
+"""
+
 def find_sum(arr, target):
     # sort the array in ascending order
     # keep one pointer at the beginning of the arr
