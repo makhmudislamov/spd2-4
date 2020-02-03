@@ -37,6 +37,6 @@ def find_sum(arr, target):
 
 
 
-arr = [5, 3, 6, 8, 2, 4, 7]
+arr = [5, 6, 6, 8, 1, 4, 7]
 target = 10
 print(find_sum(arr, target))
