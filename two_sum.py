@@ -22,9 +22,9 @@ def find_sum(arr, target):
 
     while left_pointer < len(sorted_arr):
         while right_pointer > 0:
-            pointer_sum = sorted_arr[left_pointer] + sorted_arr[right_pointer]
-            if pointer_sum == target:
-                return list(sorted_arr[left_pointer], sorted_arr[right_pointer])
+            pointers_sum = sorted_arr[left_pointer] + sorted_arr[right_pointer]
+            if pointers_sum == target:
+                 print(sorted_arr[left_pointer], sorted_arr[right_pointer])
             pass
 
 
