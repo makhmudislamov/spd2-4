@@ -19,13 +19,21 @@ def find_sum(arr, target):
 
     left_pointer = 0
     right_pointer = len(sorted_arr)-1
+    found = []
 
     while left_pointer < len(sorted_arr):
         while right_pointer > 0:
             pointers_sum = sorted_arr[left_pointer] + sorted_arr[right_pointer]
             if pointers_sum == target:
-                 print(sorted_arr[left_pointer], sorted_arr[right_pointer])
-            pass
+                #  print(sorted_arr[left_pointer], sorted_arr[left_pointer])
+                found.append(sorted_arr[left_pointer])
+                found.append(sorted_arr[right_pointer])
+                return found
+            elif pointers_sum > target:
+                right_pointer -= 1
+            elif pointers_sum < target:
+                left_pointer += 1
+        
 
 
 
