@@ -17,9 +17,17 @@ def largest(arr, k):
     # loop over the arr
     # keep track of up to k largest
     # values seen so far in a new array
-    largest_k = []
+    largest_k = [] # length = k
+    index = 0
 
-    # for items in arr:
+    while index < len(arr) and len(largest_k) != k:
+        # loop over
+        # compare neighbour values
+        # append the largest
+        # during second and more iterations
+        # check if the value at specific index is in the new array.
+        # dont append the already existing value
+        index += 1
 
 
 
