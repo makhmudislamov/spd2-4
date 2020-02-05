@@ -37,6 +37,6 @@ def find_sum(arr, target):
                 left_pointer += 1
         
 
-arr = [5, 6, 6, 8,  2, 4, 7]
+arr = [5, 6, 6, 8, 2, 4, 7]
 target = 16
 print(find_sum(arr, target))
