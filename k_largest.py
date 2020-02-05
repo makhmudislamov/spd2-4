@@ -4,4 +4,6 @@ Example: a=[5, 1, 3, 6, 8, 2, 4, 7], k=3  =>  [6, 8, 7]
 """
 
 def largest(arr, k):
-    pass
+    # sort the array
+    # slice the last k part
+    # return the list
