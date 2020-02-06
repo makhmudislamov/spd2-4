@@ -39,12 +39,20 @@ def similarity_score(new_handle, all_handles):
         print(char, score)
     return score
 
-def step2(new_handle, all_handles):
-    
+def filter(new_handle, all_handles):
+    # break new handle into substings in 
+    # uppercase >> iLoveDogs - 'i' 'Love' 'Dogs' substring should be longer than one char
+
+    # iterate over the list
+    # compare the length of new handle and each handle
+    # append the handle if (it has one or all substrings) and +-3 char len difference handles to empty set
+    # return the set
     pass
 
 
-new_handle = 'iLoveDogsS'
+
+
+new_handle = 'iLoveDogs'
 all_handles = 'eDogeCoin'
 
 print(similarity_score(new_handle, all_handles))
