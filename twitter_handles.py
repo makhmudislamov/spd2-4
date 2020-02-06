@@ -50,6 +50,15 @@ def filter(new_handle, all_handles):
     pass
 
 
+def score_mapper(new_handle, all_handles):
+    # empty dictionary
+    # iterates though all handles:
+    #   calls score calculator
+    #   maps each handle and similarity score in dict
+    # return the dict
+    pass
+
+
 
 
 new_handle = 'iLoveDogs'
