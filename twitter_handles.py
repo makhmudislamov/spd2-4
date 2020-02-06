@@ -11,32 +11,38 @@ for each letter that occurs in only one handle. Your function should return k ha
 the highest similarity score to the new user’s handle.
 
 Example execution:
-handles = ['DogeCoin', 'YangGang2020', 'HodlForLife', 'fakeDonaldDrumpf', 'GodIsLove', 'BernieOrBust']
+handles = ['DogeCoin', 'YangGang2020', 'HodlForLife', 'fakeDonaldDrump', 'GodIsLove', 'BernieOrBust']
 suggest('iLoveDogs', handles, k=2)   should return   ['GodIsLove', 'DogeCoin']
 """
 
 def similarity_score(new_handle, all_handles):
- """
- this can be used as helper function to compare the input and each handle of the array
- """
-
+    """
+    STEP1: could be helper function that compares two handles
+    compare two same length handles
+    return the score
+    """
     score = 0
     new_handle = set(new_handle)
     all_handles = set(all_handles)
+    print(new_handle)
     print(all_handles)
     for char in new_handle:
-        
-        if char in all_handles:
+
+        if char in all_handles and char.isalpha():
             score += 1
+        elif not char.isalpha():
+            continue
         else:
             score -= 1
         print(char, score)
     return score
 
+def step2(new_handle, all_handles):
+    
+    pass
 
 
-
-new_handle = 'iLoveDogs'
+new_handle = 'iLove1234Dogs'
 all_handles = 'eDogeCoin'
 
 print(similarity_score(new_handle, all_handles))
