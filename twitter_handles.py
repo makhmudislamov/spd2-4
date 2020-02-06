@@ -55,10 +55,15 @@ def score_mapper(new_handle, all_handles):
     # iterates though all handles:
     #   calls score calculator
     #   maps each handle and similarity score in dict
+    # sorts in ascending order
     # return the dict
     pass
 
 
+def similar_handles(new_handle, all_handles, k):
+    # call score mapper
+    # return k highest similarity score handles in list
+    pass
 
 
 new_handle = 'iLoveDogs'
