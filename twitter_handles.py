@@ -22,6 +22,8 @@ def similarity_score(new_handle, all_handles):
     return the score
     """
     score = 0
+    new_handle = new_handle.lower()
+    all_handles = all_handles.lower()
     new_handle = set(new_handle)
     all_handles = set(all_handles)
     print(new_handle)
@@ -42,7 +44,7 @@ def step2(new_handle, all_handles):
     pass
 
 
-new_handle = 'iLove1234Dogs'
+new_handle = 'iLoveDogsS'
 all_handles = 'eDogeCoin'
 
 print(similarity_score(new_handle, all_handles))
