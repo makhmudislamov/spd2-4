@@ -39,7 +39,7 @@ def similarity_score(new_handle, old_handle):
         print(char, score)
     return score
 
-def filter(new_handle, all_handles):
+def filter_handles(new_handle, all_handles):
  
     # iterate over the list - all_handles
     # compare the length of new handle and each handle
@@ -52,7 +52,14 @@ def filter(new_handle, all_handles):
     # uppercase >> iLoveDogs - 'i' 'Love' 'Dogs' 
     # substring should be longer than one char
     # check if old handles has this substring(s)
-    pass
+    filtered = []
+    min_len = len(new_handle) - 3
+    max_len = len(new_handle) + 3
+    for old_handle in all_handles:
+        # within range of +- 3 char range
+        if len(old_handle) >= min_len and len(old_handle) <= max_len:        
+            filtered.append(old_handle)
+    return filtered
 
 
 def score_mapper(new_handle, all_handles):
@@ -73,7 +80,8 @@ def similar_handles(new_handle, all_handles, k):
     pass
 
 
-new_handle = 'iLoveDogs'
-all_handles = 'eDogeCoin'
+new_handle = 'LovDog'
+all_handles = ['DogeCoinDgfrgrtg', 'Lov', 'Do', 'Doggo' 'YangGang2020',
+                         'HodlForLife', 'fakeDonaldDrump', 'GodIsLove', 'BernieOrBust']
 
-print(similarity_score(new_handle, all_handles))
+print(filter_handles(new_handle, all_handles))
