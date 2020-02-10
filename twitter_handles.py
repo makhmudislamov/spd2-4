@@ -21,6 +21,7 @@ def similarity_score(new_handle, all_handles):
     compare two same length handles
     return the score
     """
+    # TODO: change the 2nd arg name
     score = 0
     new_handle = new_handle.lower()
     all_handles = all_handles.lower()
@@ -45,24 +46,27 @@ def filter(new_handle, all_handles):
 
     # iterate over the list
     # compare the length of new handle and each handle
-    # append the handle if (it has one or all substrings) and +-3 char len difference handles to empty set
-    # return the set
+    # append the handle if (it has one or all substrings) and 
+    # +-3 char len difference handles to empty dict?
+    # return the dict?
     pass
 
 
 def score_mapper(new_handle, all_handles):
-    # empty dictionary
+    # empty dictionary >> key, value - old handle and sim score 
+    # call filter function
     # iterates though all handles:
     #   calls score calculator
     #   maps each handle and similarity score in dict
-    # sorts in ascending order
-    # return the dict
+    # sorts in descending order based on score
+    # return the dict?
+    # TODO: check other data str since oyu;ll have to sort
     pass
 
 
 def similar_handles(new_handle, all_handles, k):
-    # call score mapper
-    # return k highest similarity score handles in list
+    # call score mapper = dictionary
+    # return first k number of items in the above 
     pass
 
 
