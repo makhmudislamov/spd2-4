@@ -26,8 +26,6 @@ def similarity_score(new_handle, old_handle):
     old_handle = old_handle.lower()
     new_handle = set(new_handle)
     old_handle = set(old_handle)
-    print(new_handle)
-    print(old_handle)
     for char in new_handle:
 
         if char in old_handle and char.isalpha():
@@ -36,22 +34,20 @@ def similarity_score(new_handle, old_handle):
             continue
         else:
             score -= 1
-        print(char, score)
+
     return score
 
 def filter_handles(new_handle, all_handles):
- 
-    # iterate over the list - all_handles
-    # compare the length of new handle and each handle
-    # append the handle if 
-    # +-3 char len difference handles to empty list
-    # return the list
+    """
+    Returns new list with filtered handles based on their length
+    """
 
     # OPTIMIZATION:
     # break new handle into substings in
     # uppercase >> iLoveDogs - 'i' 'Love' 'Dogs' 
     # substring should be longer than one char
     # check if old handles has this substring(s)
+    # TODO: isalpha()?
     filtered = []
     min_len = len(new_handle) - 3
     max_len = len(new_handle) + 3
@@ -64,14 +60,22 @@ def filter_handles(new_handle, all_handles):
 
 def score_mapper(new_handle, all_handles):
     # empty dictionary >> key, value - old handle and sim score 
-    # call filter function
+    
     # iterates though all handles:
+    # call filter function
     #   calls score calculator
     #   maps each handle and similarity score in dict
     # sorts in descending order based on score
     # return the dict?
-    # TODO: check other data str since oyu;ll have to sort
-    pass
+    # TODO: check other data str since you'll have to sort
+    mapped_scores = {}
+    # this returns list
+    filtered_handles = filter_handles(new_handle, all_handles)
+    for old_handle in filtered_handles:
+        # returns int
+        score = similarity_score(new_handle, old_handle)
+        mapped_scores[old_handle] = score
+    return mapped_scores
 
 
 def similar_handles(new_handle, all_handles, k):
@@ -84,4 +88,4 @@ new_handle = 'LovDog'
 all_handles = ['DogeCoinDgfrgrtg', 'Lov', 'Do', 'Doggo' 'YangGang2020',
                          'HodlForLife', 'fakeDonaldDrump', 'GodIsLove', 'BernieOrBust']
 
-print(filter_handles(new_handle, all_handles))
+print(score_mapper(new_handle, all_handles))
