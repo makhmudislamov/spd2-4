@@ -40,14 +40,18 @@ def similarity_score(new_handle, old_handle):
     return score
 
 def filter(new_handle, all_handles):
-    # break new handle into substings in 
-    # uppercase >> iLoveDogs - 'i' 'Love' 'Dogs' substring should be longer than one char
-
-    # iterate over the list
+ 
+    # iterate over the list - all_handles
     # compare the length of new handle and each handle
-    # append the handle if (it has one or all substrings) and 
-    # +-3 char len difference handles to empty dict?
-    # return the dict?
+    # append the handle if 
+    # +-3 char len difference handles to empty list
+    # return the list
+
+    # OPTIMIZATION:
+    # break new handle into substings in
+    # uppercase >> iLoveDogs - 'i' 'Love' 'Dogs' 
+    # substring should be longer than one char
+    # check if old handles has this substring(s)
     pass
 
 
