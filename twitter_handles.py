@@ -15,23 +15,22 @@ handles = ['DogeCoin', 'YangGang2020', 'HodlForLife', 'fakeDonaldDrump', 'GodIsL
 suggest('iLoveDogs', handles, k=2)   should return   ['GodIsLove', 'DogeCoin']
 """
 
-def similarity_score(new_handle, all_handles):
+def similarity_score(new_handle, old_handle):
     """
-    STEP1: could be helper function that compares two handles
-    compare two same length handles
-    return the score
+    Helper function that compares two handles
+    and returns the score
     """
-    # TODO: change the 2nd arg name
+    
     score = 0
     new_handle = new_handle.lower()
-    all_handles = all_handles.lower()
+    old_handle = old_handle.lower()
     new_handle = set(new_handle)
-    all_handles = set(all_handles)
+    old_handle = set(old_handle)
     print(new_handle)
-    print(all_handles)
+    print(old_handle)
     for char in new_handle:
 
-        if char in all_handles and char.isalpha():
+        if char in old_handle and char.isalpha():
             score += 1
         elif not char.isalpha():
             continue
