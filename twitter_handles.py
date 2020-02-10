@@ -78,14 +78,21 @@ def score_mapper(new_handle, all_handles):
     return mapped_scores
 
 
-def similar_handles(new_handle, all_handles, k):
+def handle_suggestions(new_handle, all_handles, k):
     # call score mapper = dictionary
     # return first k number of items in the above 
-    pass
+    # THIS IS VERY BASIC, needs optimization that works with max score
+    suggestions = []
+    mapped_handles = score_mapper(new_handle, all_handles)
+    for handle, score in mapped_handles.items():
+        while len(suggestions) != k:
+            suggestions.append(handle)
+        return suggestions
+    # pass
 
 
 new_handle = 'LovDog'
 all_handles = ['DogeCoinDgfrgrtg', 'Lov', 'Do', 'Doggo' 'YangGang2020',
                          'HodlForLife', 'fakeDonaldDrump', 'GodIsLove', 'BernieOrBust']
 
-print(score_mapper(new_handle, all_handles))
+print(handle_suggestions(new_handle, all_handles, 1))
