@@ -8,12 +8,41 @@ Example: If the given linked list is A → B → C → D → E → F → G → H
 Example: If the given linked list is A → B → C → D → E → F and k is 4, nodes should be modified so the list becomes E → F → A → B → C → D.
 Assumptions: k is positive and smaller than n, the length of the linked list.
 * Given an array of k linked lists, each of whose items are in sorted order, 
-combine all nodes (do not create new nodes) into a single linked list with all items in order.
-
+  combine all nodes (do not create new nodes) into a single linked list with all items in order.
 """
 
-def ll_middle(linked_list):
-    """
-    Given a singly-linked list, find the middle item in the list.
-    """
-    pass
+
+class LinkedNode:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+### do not modify this class, or any of the methods in it, other than length()
+### you may insert new methods if you like
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def empty(self):
+        return self.head == None
+
+    def append(self, data):
+        if self.empty():
+            self.head = LinkedNode(data)
+            self.tail = self.head
+        else:
+            new_node = LinkedNode(data)
+            self.tail.next = new_node
+            self.tail = new_node
+
+    def extend(self, array):
+        for element in array:
+            self.append(element)
+
+  # implement this method
+  # return the length of the linked list, an integer value
+    def length(self):
+        return -1
