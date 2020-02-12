@@ -45,4 +45,11 @@ class LinkedList:
   # implement this method
   # return the length of the linked list, an integer value
     def length(self):
-        return -1
+        ll_len = 1
+        curr_node = self.head
+        if self.empty():
+            return 0
+        while curr_node.next != None:
+            curr_node = curr_node.next
+            ll_len += 1
+        return ll_len
