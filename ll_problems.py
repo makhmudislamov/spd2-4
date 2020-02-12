@@ -11,3 +11,9 @@ Assumptions: k is positive and smaller than n, the length of the linked list.
 combine all nodes (do not create new nodes) into a single linked list with all items in order.
 
 """
+
+def ll_middle(linked_list):
+    """
+    Given a singly-linked list, find the middle item in the list.
+    """
+    pass
