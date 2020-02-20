@@ -2,6 +2,7 @@ tax_brackets = [[9525, .1], [38700, .12], [82500, .22], [157500, .24]]
 
 
 def calculate_tax_withheld(annual_pay):
+    full_annual_pay = annual_pay
     taxes_withheld = 0
     for tax_threshold in tax_brackets:
         if annual_pay > tax_threshold[0]:
@@ -10,7 +11,8 @@ def calculate_tax_withheld(annual_pay):
         else:
             taxes_withheld += annual_pay * tax_threshold[1]
             break
-    return taxes_withheld
+    after_tax = full_annual_pay - taxes_withheld
+    return f"Annual pay: {full_annual_pay}, Taxes paid: {taxes_withheld}, After tax: {after_tax}"
 
 
-print(calculate_tax_withheld(150000))
+print(calculate_tax_withheld(84000))
