@@ -24,4 +24,15 @@ def recursive_fizzy(start, end):
 
     # TASK1
     # recursively add numbers to array
-    pass
+    fizzy_array = []
+    # recursifve function should 
+    # do the division
+    while start <= end:
+        fizzy_array.append(start)
+        start += 1
+        recursive_fizzy(start, end)
+
+    return fizzy_array
+
+
+print(recursive_fizzy(1, 20))
