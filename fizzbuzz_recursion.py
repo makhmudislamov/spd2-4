@@ -29,12 +29,12 @@ def recursive_fizzy(start, end):
     # do the division
     num = start
     while num <= end:
-        if num % 3 == 0:
-            fizzy_array.append("Fizz")
-        elif num % 5 == 0:
-            fizzy_array.append("Buzz")
-        elif num % 3 == 0 and num % 5 == 0:
+        if num % 3 == 0 and num % 5 == 0:
             fizzy_array.append("FizzBuzz")
+        elif num % 3 == 0:
+            fizzy_array.append("Buzz")
+        elif num % 5 == 0 :
+            fizzy_array.append("Fizz")
         else:
             fizzy_array.append(num)
         num += 1
