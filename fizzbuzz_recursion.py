@@ -27,10 +27,18 @@ def recursive_fizzy(start, end):
     fizzy_array = []
     # recursifve function should 
     # do the division
-    while start <= end:
-        fizzy_array.append(start)
-        start += 1
-        recursive_fizzy(start, end)
+    num = start
+    while num <= end:
+        if num % 3 == 0:
+            fizzy_array.append("Fizz")
+        elif num % 5 == 0:
+            fizzy_array.append("Buzz")
+        elif num % 3 == 0 and num % 5 == 0:
+            fizzy_array.append("FizzBuzz")
+        else:
+            fizzy_array.append(num)
+        num += 1
+        recursive_fizzy(num, end)
 
     return fizzy_array
 
