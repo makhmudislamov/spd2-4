@@ -9,4 +9,19 @@ SPRINT → PRINT → PINT → PIT → IT → I
 """
 
 def is_smashable(str, dictionary):
+    # base case
+    # pull out all one letter words from the dictionoary
+    # if the input string doesnt contain any of those letters
+    # return false
+
+    # if the input containts any of the letter
+    # try to build back from that
+    # example input has I >>
+    # I
+    # IT
+    # PIT
+    # PINT
+    # PRINT
+    # SPRINT
+    # do this process until length of input str is reached
     pass
